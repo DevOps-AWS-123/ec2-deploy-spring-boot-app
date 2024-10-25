@@ -16,12 +16,12 @@ pipeline {
     //     AWS_REGION = 'us-west-2' // Specify your AWS region
     //     TF_VAR_rds_password = credentials('rds_password') // Reference your Jenkins credential for RDS password
     // }
-    options {
-        // Set build timeout (optional)
-        timeout(time: 1, unit: 'HOURS')
-        // Enable build discarding to keep the workspace clean
-        buildDiscarder(logRotator(numToKeepStr: '5'))
-    }
+    // options {
+    //     // Set build timeout (optional)
+    //     timeout(time: 1, unit: 'HOURS')
+    //     // Enable build discarding to keep the workspace clean
+    //     buildDiscarder(logRotator(numToKeepStr: '5'))
+    // }
     stages {
         stage('Checkout') {
             steps {
